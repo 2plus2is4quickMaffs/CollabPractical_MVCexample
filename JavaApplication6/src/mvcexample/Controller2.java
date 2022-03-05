@@ -18,16 +18,16 @@ public class Controller2 extends JFrame
     private View4 view4;
     private JButton clearViews;   // For direct message to views
     private JButton incB;     // To prompt the model to "modify" itself (B component)
- 
+
     // Constructor
-    public Controller2(Model model) {
+    public Controller2(Model model,String s,int x,int y) {
     
         // Record reference to the model
         this.model = model;
         
         // Configure the window
-        setTitle("Controller2");
-        setLocation(40,200);
+        setTitle(s);
+        setLocation(x,y);
         setSize(350,150);
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         Container window = getContentPane();
@@ -61,6 +61,7 @@ public class Controller2 extends JFrame
         else if (e.getSource() == incB) 
             model.modifyB();     // The model will trigger the views to update themselves
          
+
         //}
         
     } // actionPerformed
